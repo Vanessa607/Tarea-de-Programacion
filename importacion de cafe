@@ -1,0 +1,75 @@
+//Este programa fue hecho por:
+//Estefany Vanessa Cerritos Zelaya
+
+//Este programa sirve para obtener
+//El total del valor de las ventas a nuestros clientes
+#include <iostream>
+//libreria que se utilizo para realizar el programa
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+//Declaracion de las variables a utilizar
+	float descuento;
+	float iva;
+	float sacos;
+	float total;
+	float totaldepago;
+	//Introducir la cantidad de sacos que nuestros clientes compraron
+	cout << "cuantos sacos decea comprar " <<endl;
+	cin >> sacos;
+	//operacion de cuanto seria el costo de la cantidad de sacos de cafe 
+	total = sacos * 100;
+	//Si compra mas de 100 sacos se le aplica descuento
+	if (( sacos > 100)) {
+		//Aplicando el descuento del 10% y el iva 
+		descuento = 0.10 * total;
+		iva = 0.13 * total;
+		totaldepago = total - descuento + iva;
+		//Mensaje que mostrara para hacer constar del monto a pagar si se aplica descuento
+		cout << "Total a pagar: $"  <<totaldepago << endl;
+	}
+	//Si compra mas de 200 sacos se le aplica descuento
+	else if (( sacos > 200 )) {
+		//Aplicando el descuento del 15% y el iva
+		descuento = 0.15 * total;
+		iva = 0.13 * total;
+		totaldepago = total - descuento + iva;
+		//Mensaje que mostrara para hacer constar del monto a pagar si se aplica descuento
+		cout << "Total a pagar: $"  <<totaldepago << endl;
+	}
+	//Si compra mas de 250 y menos de 300 sacos se le aplica descuento 
+	else if (( sacos > 250 && sacos < 300)) {
+		//Aplicando el descuento del 20% y el iva
+		descuento = 0.20 * total;
+		iva = 0.13 * total;
+		totaldepago = total - descuento + iva;
+		//Mensaje que mostrara para hacer constar del monto a pagar si se aplica descuento
+		cout << "Total a pagar: $"  <<totaldepago << endl;
+	}
+	//Si compra mas o 300 sacos se le aplica descuento
+	else if (( sacos >= 300)) {
+		//Aplicando descuento del 25% y el iva 
+		descuento = 0.25 * total;
+		iva = 0.13 * total;
+		totaldepago = total - descuento + iva;
+		//Mensaje que mostrara para hacer constar del monto a pagar si se aplica descuento
+		cout << "Total a pagar: $"  <<totaldepago << endl;
+	}
+	else {
+		//Mensaje que se mostrara cuando el cliente 
+		//No entra en los rangos establecidos 
+		cout << "No se aplicara ningun descuento" <<endl;
+		//Mensaje que mostrara informando la cantidad final 
+		//Que pagara el cliente ya sea que se le hayan aplicado los descuentos o no 
+		cout << "Su total a cancelar es: $" << total << endl;
+	}
+	
+    
+	
+	
+		
+	
+	
+return 0;
+}
