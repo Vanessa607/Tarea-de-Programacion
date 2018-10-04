@@ -1,0 +1,71 @@
+#include <iostream>
+#include <windows.h>
+#include <cstdlib>
+
+using namespace std;
+
+//No retorna nada ni recive nada declaracion
+void c();
+int sumar(int acum , int aux);
+int pedirNum();
+int main(){
+	
+	//Contador
+	int n=1;
+	//Acumulador
+	int suma = 0;
+	//Auxiliar, almacena el numero que se acaba de ingresar
+	int aux;
+	int vn;
+	
+	vn = pedirNum();
+	
+	while (n <= vn)
+	{
+		//la llamo
+		c();
+		cout << "Ingrese el numero" << n << ":" <<endl;
+		cin >> aux;
+		suma = sumar (suma,aux);
+		n++;
+	}
+	
+		c();
+		cout << "El resultado de la suma de numeros es de:" << suma << endl;
+		system ("pause");
+		c();
+		cout << "Desarrollado por @xyz"  <<endl;
+		cout << "Version:" << sumar(1,3) <<endl;
+		system ("pause");	
+	
+}
+
+//la implemento
+void c()
+{
+	system ("cls");
+	cout << "--------------------------------------------" <<endl;
+	cout << "--------------------------------------------" <<endl;
+}
+
+int sumar (int aux, int acum)
+{
+	return acum + aux;
+}
+
+int pedirNum()
+{
+	//cuantos numeros se sumaran
+	int vn;
+	
+	do{
+		//llamo la funcion
+		c();
+		cout << "Cuantos numeros decea sumar (2-4):";
+		cin >> vn;
+	}while(vn < 2 or vn > 4);
+	
+	return vn;
+}
+
+
