@@ -1,0 +1,48 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main(){
+	
+	 int fil;
+	 int col;
+	 
+	 int matriz[30][30];
+	 int matrizB[30][30];
+	 cout <<"Ingrese el numero de filas:";
+	 cin>>fil;
+	 cout <<"Ingrese el numero de columnas:";
+	 cin>>col;
+	 
+	 for(int i=0; i<fil; i++){
+	 	for (int j=0 ; j<col; j++){
+	 		cout<<"Ingrese datos: ["<<i<<"]["<<j<<"]"; 
+	 		cin>>matriz[i][j];
+		 }
+	 }
+	 
+	  for(int i=0; i<fil; i++){
+	 	for (int j=0 ; j<col; j++){
+	 		cout<<matriz[i] [j]<<" "; 
+	 		}
+	 		cout<<endl;
+		}
+		
+	//Pasar los datos a una matriz B
+
+	for(int i=0; i<fil; i++){
+	 	for (int j=0 ; j<col; j++){
+	 		matrizB [i] [j] = matriz [i] [j];
+		 }
+	}
+	
+	cout<<"\nmatriz B \n"; 
+	
+	  for(int i=0; i<fil; i++){
+	 	for (int j=0 ; j<col; j++){
+	 		cout<<matrizB[i] [j]<<" "; 
+	 		}
+	 		cout<<endl;	
+	 	}
+	return 0;
